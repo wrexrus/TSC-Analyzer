@@ -1,0 +1,28 @@
+# Ignore environment files
+.env
+server/.env
+
+node_modules    
+# Ignore log files
+*.log
+
+# Ignore build output
+client/build/
+client/dist/
+server/dist/
+
+# Ignore OS-specific files
+Thumbs.db
+ehthumbs.db
+*.swp
+
+# Ignore IDE/editor settings
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Ignore package lock files if not needed
+# (optional, if you don't want to track lock files)
+package-lock.json
+yarn.lock
