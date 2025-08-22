@@ -3,6 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import cors from "cors";
+
+app.use(cors({
+  origin: process.env.FRONTEND_URL || "*", 
+  methods: ["GET", "POST"],
+}));  
+
+app.get("/", (req, res) => {
+  res.send("✅ Backend is running!");
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

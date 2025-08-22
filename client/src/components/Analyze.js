@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import API_BASE_URL from "./config";
 
 const Analyze = () => {
   const [code, setCode] = useState('');
@@ -10,11 +11,11 @@ const Analyze = () => {
     if (!code.trim()) return;
     setLoading(true);
     try {
-      const res = await fetch('http://localhost:5000/analyze', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ code }),
-      });
+      const res = await fetch(`${API_BASE_URL}/analyze`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ code }),
+    });
       const data = await res.json();
       setResult(data);
       setShowResult(true);
