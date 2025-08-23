@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { GrPowerReset } from "react-icons/gr";
 
-const API_BASE = process.env.REACT_APP_API_BASE || 'http://localhost:5000';
+const API_BASE = process.env.REACT_APP_API_BASE;
 
 export default function Chatbot({ open, onClose }) {
   const [messages, setMessages] = useState([
