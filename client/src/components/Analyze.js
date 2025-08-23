@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import API_BASE_URL from "./config";
 
+
 const Analyze = () => {
   const [code, setCode] = useState('');
   const [result, setResult] = useState(null);
